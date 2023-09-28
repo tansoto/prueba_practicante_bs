@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente del texto en Arial o una fuente sans-serif */
+    margin: 0; /* Elimina los márgenes externos del cuerpo */
+    padding: 0; /* Elimina los rellenos internos del cuerpo */
+    background-image: url("../images/fondo-inicial-2.png"); /* Establece una imagen de fondo para el cuerpo */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el cuerpo */
+    background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace al desplazarse */
+    line-height: 1; /* Establece la altura de línea del texto en 1 */
+
+    /* Center and scale the image nicely */
+    background-position: center;
+}
+.blur-card {
+    backdrop-filter: blur(5px); /* Ajusta el valor según tu preferencia */
+    background-color: rgba(255, 255, 255, 0.5); /* Color de fondo con transparencia */
+}
