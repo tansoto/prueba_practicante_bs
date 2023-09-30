@@ -1,7 +1,9 @@
 from django.urls import path
-from .views import list_tasks, CRUD
+from .views import Menu, CRUD, agregarpokemon, eliminarPokemon
 
 urlpatterns = [
-    path('', list_tasks),
-    path('CRUD/', CRUD)
+    path('', Menu),
+    path('CRUD/', CRUD),
+    path('addPokemon/', agregarpokemon),
+    path('eliminarPokemon/<int:id_pokemon>/', eliminarPokemon)
 ]

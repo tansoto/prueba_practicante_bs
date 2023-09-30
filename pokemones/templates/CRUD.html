@@ -22,43 +22,42 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="row">
-                                <div class="col-6 mb-6">
-                                    <label for="codigo" class="col-form-label-sm form-label">Código</label>
-                                    <input type="text" class="form-control form-control-sm" id="codigo" name="codigo" />
-                                </div>
-                                <div class="col-6 mb-6">
-                                    <label for="nombre_pokemon" class="col-form-label-sm form-label">Nombre
-                                        Pokemon</label>
+                                <div class="col-12 mb-12">
+                                    <label for="descripcion" class="col-form-label-sm form-label">Nombre Pokemon</label>
                                     <input type="text" class="form-control form-control-sm" id="nombre_pokemon"
                                         name="nombre_pokemon" />
                                 </div>
-                                <div class="col-12 mb-12">
-                                    <label for="descripcion" class="col-form-label-sm form-label">Descripción</label>
-                                    <input type="text" class="form-control form-control-sm" id="descripcion"
-                                        name="descripcion" />
+                                <div class="col-6 mb-4">
+                                    <label for="region" class="col-form-label-sm form-label">Region</label>
+                                    <input type="text" class="form-control form-control-sm" id="region" name="region" />
                                 </div>
-                                <div class="col-4 mb-4">
-                                    <label for="nivel" class="col-form-label-sm form-label">Nivel</label>
-                                    <input type="text" class="form-control form-control-sm" id="nivel" name="nivel" />
-                                </div>
-                                <div class="col-4 mb-4">
-                                    <label for="tipo" class="col-form-label-sm form-label">Tipo</label>
-                                    <input type="text" class="form-control form-control-sm" id="tipo" name="tipo" />
-                                </div>
-                                <div class="col-4 mb-4">
-                                    <label for="estado" class="col-form-label-sm form-label">Estado</label>
-                                    <select id="estado" name="estado" class="form-control form-control-sm">
-                                        <option value="0" selected>Seleccionar</option>
-                                        <option value="Activo">Activo</option>
-                                        <option value="Inactivo">Inactivo</option>
+                                <div class="col-6 mb-4">
+                                    <label for="Tipo" class="col-form-label-sm form-label">Tipo</label>
+                                    <select id="tipo" name="tipo" class="form-control form-control-sm">
+                                        <option value="0" selected>Seleccionar tipo</option>
+                                        <option value="Bicho">1-Bicho</option>
+                                        <option value="Dragon">2-Dragón</option>
+                                        <option value="Electrico">3-Eléctrico</option>
+                                        <option value="Hada">4-Hada</option>
+                                        <option value="Lucha">5-Lucha</option>
+                                        <option value="Fuego">6-Fuego</option>
+                                        <option value="Volador">7-Volador</option>
+                                        <option value="Fantasma">8-Fantasma</option>
+                                        <option value="Planta">9-Planta</option>
+                                        <option value="Tierra">10-Tierra</option>
+                                        <option value="Hielo">11-Hielo</option>
+                                        <option value="Normal">12-Normal</option>
+                                        <option value="Veneno">13-Veneno</option>
+                                        <option value="Psiquico">14-Psíquico</option>
+                                        <option value="Roca">15-Roca</option>
+                                        <option value="Acero">16-Acero</option>
+                                        <option value="Agua">17-Agua</option>
                                     </select>
                                 </div>
                                 <div class="row">
                                     <div class="col-12 mb-12">
                                         <center>
                                             <input type="submit" class="btn btn-primary" value="Ingresar" />
-                                            <input type="submit" class="btn btn-success" value="Modificar" />
-                                            <input type="submit" class="btn btn-danger" value="Eliminar" />
                                             <a href="../" class="btn btn-secondary">Cancelar</a>
                                         </center>
                                     </div>
@@ -70,7 +69,7 @@
             </div>
         </div>
     </div>
-    <hr />
+    <br>
     <div class="row">
         <div class="col">
             <div id="grillas">
@@ -78,25 +77,42 @@
                     <div class="card-header">Listado de Pokemones</div>
                     <div class="card-body">
                         {% if pokemones %}
+
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th>Código</th>
                                     <th>Nombre</th>
-                                    <th>Nivel</th>
+                                    <th>Region</th>
                                     <th>Tipo</th>
-                                    <th>Estado</th>
                                     <th>Acción</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {% for pokemon in pokemones %}
+
                                 <tr>
-                                    <td>{{ pokemon.codigo }}</td>
                                     <td>{{ pokemon.nombre_pokemon }}</td>
-                                    <td>{{ pokemon.nivel }}</td>
-                                    <td>{{ pokemon.tipo }}</td>
-                                    <td>{{ pokemon.estado }}</td>
+
+                                    {% for region_pokemon in regiones_pokemones %}
+                                    {% if region_pokemon.id_pokemon_id == pokemon.id %}
+                                    {% for region in regiones %}
+                                    {% if region.id == region_pokemon.id_region_id %}
+                                    <td>{{ region.nombre_region }}</td>
+                                    {% endif %}
+                                    {% endfor %}
+                                    {% endif %}
+                                    {% endfor %}
+
+                                    {% for tipo_pokemon in tipos_pokemones %}
+                                    {% if tipo_pokemon.id_pokemon_id == pokemon.id %}
+                                    {% for tipo in tipos %}
+                                    {% if tipo.id == tipo_pokemon.id_tipo_id %}
+                                    <td>{{ tipo.nombre_tipo }}</td>
+                                    {% endif %}
+                                    {% endfor %}
+                                    {% endif %}
+                                    {% endfor %}
+
                                     <td>
                                         <a href="../ModPokemon/{{ pokemon.id }}"
                                             class="btn btn-success btn-sm">Modificar</a>
