@@ -8,7 +8,11 @@ def Menu(request):
 
 
 def CRUD(request):
-    pokemon = POKEMON.objects.all()
+    # Obtén la cadena de búsqueda del parámetro GET
+    query = request.GET.get('q', '')
+
+    # Filtra los Pokémon que coinciden con la búsqueda
+    pokemon = POKEMON.objects.filter(nombre_pokemon__icontains=query)
     tipo_pokemon = TIPO_POKEMON.objects.all()
     region_pokemon = REGION_POKEMON.objects.all()
     tipo = TIPO.objects.all()
@@ -17,8 +21,14 @@ def CRUD(request):
     formulario = PokemonForm(request.POST or None, request.FILES or None)
     print(formulario)
 
-    data = {'pokemones': pokemon, 'tipos': tipo,
-            'regiones': region, 'formulario': formulario, 'tipos_pokemones': tipo_pokemon, 'regiones_pokemones': region_pokemon}
+    data = {
+        'pokemones': pokemon,
+        'tipos': tipo,
+        'regiones': region,
+        'formulario': formulario,
+        'tipos_pokemones': tipo_pokemon,
+        'regiones_pokemones': region_pokemon,
+    }
     return render(request, 'CRUD.html', data)
 
 

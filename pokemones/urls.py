@@ -3,7 +3,7 @@ from .views import Menu, CRUD, agregarpokemon, eliminarPokemon, editarPokemon, e
 
 urlpatterns = [
     path('', Menu),
-    path('CRUD/', CRUD),
+    path('CRUD/', CRUD, name='CRUD'),
     path('addPokemon/', agregarpokemon),
     path('eliminarPokemon/<int:id_pokemon>/', eliminarPokemon),
     path('editarPoke/<int:id_pokemon>/', editarPokemon),
