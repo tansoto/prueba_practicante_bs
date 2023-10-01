@@ -34,11 +34,11 @@
                                 <div class="col-6 mb-4">
                                     <label for="Tipo" class="col-form-label-sm form-label">Tipo</label>
                                     <select id="tipo" name="tipo" class="form-control form-control-sm">
-                                        <option value="0" selected>Seleccionar tipo</option>
+                                        <option value="0" selected>Seleccionar</option>
                                         <option value="Bicho">1-Bicho</option>
                                         <option value="Dragon">2-Dragón</option>
                                         <option value="Electrico">3-Eléctrico</option>
-                                        <option value="Hada">4-Hada</option>
+                                        <option value="Hada">4-hada</option>
                                         <option value="Lucha">5-Lucha</option>
                                         <option value="Fuego">6-Fuego</option>
                                         <option value="Volador">7-Volador</option>
@@ -58,6 +58,7 @@
                                     <div class="col-12 mb-12">
                                         <center>
                                             <input type="submit" class="btn btn-primary" value="Ingresar" />
+
                                             <a href="../" class="btn btn-secondary">Cancelar</a>
                                         </center>
                                     </div>
@@ -114,8 +115,8 @@
                                     {% endfor %}
 
                                     <td>
-                                        <a href="../ModPokemon/{{ pokemon.id }}"
-                                            class="btn btn-success btn-sm">Modificar</a>
+                                        <a href="../editarPoke/{{ pokemon.id }}"
+                                            class="btn btn-success btn-sm">Editar</a>
                                         <a href="../eliminarPokemon/{{ pokemon.id }}"
                                             class="btn btn-danger btn-sm">Eliminar</a>
                                     </td>

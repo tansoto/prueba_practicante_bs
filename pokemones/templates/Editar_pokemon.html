@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <title>Editar Pokemon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="{% static 'css/micss.css'%}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="form" method="POST">
+        <div class="card" style="width: 500px;margin:0px auto;margin-top: 50px;">
+            <div class="card-header">Editar Pokemon id : {{pokemones.id}}</div>
+            <div class="card-body">
+                <form action="../../editarPokemon/" method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <input type="hidden" value="{{pokemones.id}}" id="pokemon_id" name="pokemon_id">
+                                <input type="hidden" value="{{regiones.id}}" id="region" name="region_id">
+                                <input type="hidden" value="{{tipos.id}}" id="tipo_id" name="tipo_id">
+                                <div class="col-12 mb-12">
+                                    <label for="descripcion" class="col-form-label-sm form-label">Nombre Pokemon</label>
+                                    <input type="text" class="form-control form-control-sm" id="nombre_pokemon"
+                                        name="nombre_pokemon" placeholder="{{pokemones.nombre_pokemon}}" />
+                                </div>
+                                <div class="col-6 mb-4">
+                                    <label for="region" class="col-form-label-sm form-label">Region</label>
+                                    <input type="text" class="form-control form-control-sm" id="region" name="region"
+                                        placeholder="{{regiones.nombre_region}}" />
+                                </div>
+                                <div class="col-6 mb-4">
+                                    <label for="Tipo" class="col-form-label-sm form-label">Tipo</label>
+                                    <select id="tipo" name="tipo" class="form-control form-control-sm">
+                                        <option value="{{tipos.nombre_tipo}}" selected>{{tipos.nombre_tipo}}</option>
+                                        <option value="Bicho">1-Bicho</option>
+                                        <option value="Dragon">2-Dragón</option>
+                                        <option value="Electrico">3-Eléctrico</option>
+                                        <option value="Hada">4-hada</option>
+                                        <option value="Lucha">5-Lucha</option>
+                                        <option value="Fuego">6-Fuego</option>
+                                        <option value="Volador">7-Volador</option>
+                                        <option value="Fantasma">8-Fantasma</option>
+                                        <option value="Planta">9-Planta</option>
+                                        <option value="Tierra">10-Tierra</option>
+                                        <option value="Hielo">11-Hielo</option>
+                                        <option value="Normal">12-Normal</option>
+                                        <option value="Veneno">13-Veneno</option>
+                                        <option value="Psiquico">14-Psíquico</option>
+                                        <option value="Roca">15-Roca</option>
+                                        <option value="Acero">16-Acero</option>
+                                        <option value="Agua">17-Agua</option>
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 mb-12">
+                                        <center>
+                                            <input type="submit" class="btn btn-primary" value="Ingresar" />
+
+                                            <a href="../../CRUD" class="btn btn-secondary">Volver</a>
+                                        </center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+</body>
+
+</html>

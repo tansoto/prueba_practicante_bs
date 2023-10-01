@@ -63,3 +63,46 @@ def eliminarPokemon(request, id_pokemon):
     tipo.delete()
 
     return redirect('../../CRUD/')
+
+
+def editarPokemon(request, id_pokemon):
+    pokemon = POKEMON.objects.get(id=id_pokemon)
+    tipo_pokemon = TIPO_POKEMON.objects.get(id_pokemon=id_pokemon)
+    region_pokemon = REGION_POKEMON.objects.get(id_pokemon=id_pokemon)
+
+    region = REGION.objects.get(id=region_pokemon.id_region_id)
+    tipo = TIPO.objects.get(id=tipo_pokemon.id_tipo_id)
+
+    data = {'pokemones': pokemon, 'tipos': tipo, 'regiones': region,
+            'tipos_pokemones': tipo_pokemon, 'regiones_pokemones': region_pokemon}
+    return render(request, 'Editar_pokemon.html', data)
+
+
+def editarPokemon2(request):
+    # nombre de la variable en el modelo = variable obtenida de html
+    id_pokemon = request.POST['pokemon_id']
+    id_region = request.POST['region_id']
+    id_tipo = request.POST['tipo_id']
+    nombre = request.POST['nombre_pokemon']
+    region = request.POST['region']
+    tipo = request.POST['tipo']
+
+    print(f" Pokémon ID en editar: {id_pokemon}")
+    print(f" Región ID en editar: {id_region}")
+    print(f" Tipo ID en editar: {id_tipo}")
+
+    # actualizamos cada atributo
+
+    pokemon_actualizado = POKEMON.objects.get(id=id_pokemon)
+    region_actualizada = REGION.objects.get(id=id_region)
+    tipo_actualizado = TIPO.objects.get(id=id_tipo)
+
+    pokemon_actualizado.nombre_pokemon = nombre
+    region_actualizada.nombre_region = region
+    tipo_actualizado.nombre_tipo = tipo
+
+    pokemon_actualizado.save()
+    region_actualizada.save()
+    tipo_actualizado.save()
+
+    return redirect('../../CRUD/')
