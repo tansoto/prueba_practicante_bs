@@ -1,0 +1,48 @@
+
+body {
+    background-image: url("../images/fondo-inicial-3.png"); /* Establece una imagen de fondo para el cuerpo */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el cuerpo */
+    background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace al desplazarse */
+    line-height: 1; /* Establece la altura de línea del texto en 1 */
+    background-color: #23f14f;
+}
+
+.card {
+    margin: 50px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #f8d030;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #f8d030;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    background-color: #daa520;
+}
+
