@@ -16,8 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from post.api.router import router_posts
+from pokemones.api.router import router_pokemones, router_region, router_tipo
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/', include(router_posts.urls)),
+    path('api/pokemones', include(router_pokemones.urls)),
+    path('api/region', include(router_region.urls)),
+    path('api/tipos', include(router_tipo.urls)),
     path('', include('pokemones.urls')),
-    path('pokemones/', include('pokemones.urls'))
+    path('pokemones/', include('pokemones.urls')),
+    path('api-auth/', include('rest_framework.urls'))
 ]
