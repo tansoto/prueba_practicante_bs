@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@covalent/core": "github:Teradata/covalent-nightly",
+    "@covalent/echarts": "github:Teradata/covalent-echarts-nightly"
+  }
+}
