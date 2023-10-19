@@ -1,0 +1,137 @@
+{
+    "historias": [
+      {
+        "identificación": 1,
+        "nombre": "Park Row en Beekman St",
+        "dirección": "38 Park Row",
+        "ciudad": "Nueva York",
+        "openingHours": "10:00 - 14:00 y 17:00 - 20:30"
+      },
+      {
+        "identificación": 2,
+        "nombre": "Tienda Alcalá",
+        "dirección": "Calle de Alcalá, 21",
+        "ciudad": "Madrid",
+        "openingHours": "10:00 - 14:00 y 17:00 - 20:30"
+      },
+      {
+        "identificación": 3,
+        "nombre": "Cámaras y West Broadway",
+        "dirección": "Calle Chambers 125",
+        "ciudad": "Nueva York",
+        "openingHours": "10:00 - 14:00 y 17:00 - 20:30"
+      },
+      {
+        "identificación": 4,
+        "nombre": "Covent Garden - Russell St",
+        "dirección": "Calle Russell 10",
+        "ciudad": "Londres",
+        "openingHours": "10:00 - 14:00 y 17:00 - 20:30"
+      },
+      {
+        "identificación": 5,
+        "nombre": "Monmouth St",
+        "dirección": "Calle Monmouth, 11",
+        "ciudad": "Londres",
+        "openingHours": "10:00 - 14:00 y 17:00 - 20:30"
+      }
+    ],
+    "categorías": [
+      {
+        "identificación": 1,
+        "nombre": "Libros"
+      },
+      {
+        "identificación": 2,
+        "nombre": "Electrónica"
+      },
+      {
+        "identificación": 3,
+        "nombre": "Computadoras"
+      }
+    ],
+    "productos": [
+      {
+        "identificación": 1,
+        "name": "Essential TypeScript 4: de principiante a profesional",
+        "precio": 45,
+        "description": "Aprenda lo esencial y más de TypeScript, un superconjunto popular del lenguaje JavaScript que agrega soporte para escritura estática. TypeScript combina las funciones de escritura de C# o Java.",
+        "ID de categoría": 1,
+        "valores": 0
+      },
+      {
+        "identificación": 2,
+        "name": "Hackeando el cerebro de tus compradores: PsychoGrowth",
+        "precio": 5,
+        "description": "En Hackeando del cerebro de tus compradores, Corti nos revela cómo muchas compañías crean productos digitales o procesos de venta capaces de conectar con la psicología del comprador.",
+        "ID de categoría": 1,
+        "valores": 10
+      },
+      {
+        "identificación": 3,
+        "name": "Enrutamiento angular: aprenda a crear SPA y del lado del cliente con enrutamiento y navegación",
+        "precio": 17,
+        "description": "En este libro, el lector podrá centrarse en un concepto de Angular en profundidad.",
+        "ID de categoría": 1,
+        "valores": 10
+      },
+      {
+        "identificación": 4,
+        "name": "Tarjeta de memoria SanDisk Ultra MicroSDXC UHS-I de 128 GB con adaptador",
+        "precio": 19,
+        "description": "Ideal para teléfonos inteligentes y tabletas Android y cámaras MIL. Aplicación SanDisk Memory Zone para una fácil administración de archivos (se requiere descarga e instalación).",
+        "ID de categoría": 2,
+        "valores": 10
+      },
+      {
+        "identificación": 5,
+        "name": "GoPro HERO9 Black - Cámara de acción resistente al agua con LCD frontal",
+        "precio": 399,
+        "description": "Vídeo 5K: graba vídeos impresionantes con una resolución de hasta 5K, perfecto para mantener los detalles incluso cuando haces zoom",
+        "ID de categoría": 2,
+        "valores": 10
+      },
+      {
+        "identificación": 6,
+        "name": "Cable HDMI 4K de alta velocidad con clasificación CL3 - 6 pies",
+        "precio": 7,
+        "description": "Cable HDMI A macho a A macho: Admite Ethernet, 3D, vídeo 4K y canal de retorno de audio (ARC)",
+        "ID de categoría": 2,
+        "valores": 10
+      },
+      {
+        "identificación": 7,
+        "name": "Combo de teclado y ratón inalámbricos Logitech MK270",
+        "precio": 32,
+        "description": "El receptor USB está convenientemente ubicado en la tapa superior de la caja. Este teclado y mouse inalámbricos cuentan con tecnología Logitech Advanced de 2,4 GHz con un alcance de hasta 10 metros.",
+        "ID de categoría": 3,
+        "valores": 10
+      },
+      {
+        "identificación": 8,
+        "name": "Unidad de CD externa USB 3.0 Unidad de CD DVD +/-RW portátil Unidad de DVD/CD ROM",
+        "precio": 20,
+        "description": "Plug & play. Fácil de usar, alimentado por puerto USB. No necesita controlador externo ni alimentación. Simplemente conéctelo a su puerto USB y se detectará el controlador de DVD",
+        "ID de categoría": 3,
+        "valores": 10
+      }
+    ],
+    "pedidos": [
+      {
+        "identificación": 1,
+        "nombre": "Dominicódigo",
+        "fecha": "12/01/1995",
+        "shippingAddress": "Av. de la Granvia de Hospitalet, 115",
+        "ciudad": "Barcelona",
+        "recogida": "verdadero"
+      }
+    ],
+    "detallesPedidos": [
+      {
+        "identificación": 1,
+        "ID de pedido": 1,
+        "cantidad": 10,
+        "productName": "Nombre del producto"
+      }
+    ]
+  }

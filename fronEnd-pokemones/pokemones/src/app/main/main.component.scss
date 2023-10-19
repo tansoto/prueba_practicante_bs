@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    line-height: 1;
+    background-position: center;
+    min-height: 100vh;
+}
+
+
+.titulo {
+    width: 40%;
+    margin-top: 150px;
+    margin-left: 90px;
+}
+
+.titulo h1 {
+    border-bottom: #ffffff 5px solid;
+    border-right: #ffffff 5px solid;
+    font-size: 7em;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.subtitulo {
+    border-bottom: #1e87e9 3px solid;
+    width: 210px;
+    margin-left: 82%;
+    margin-top: 21%;
+}
+
+.subtitulo h3 {
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-bottom: 0px;
+}
+
+.btn-flotante {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    background-color: #1e87e9;
+    padding: 18px 30px;
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    transition: background-color 300ms ease, transform 300ms ease, box-shadow 300ms ease;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+}
+
+.btn-flotante:hover {
+    background-color: #122579;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-7px);
+}
+
+@media only screen and (max-width: 1300px) {
+    .titulo {
+        width: 75%;
+        margin-top: 100px;
+        margin-left: 9px;
+    }
+    .titulo h1 {
+        border-bottom: #ffffff 5px solid;
+        border-right: #ffffff 5px solid;
+        font-size: 3em;
+        color: #ffffff;
+        font-weight: bold;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+
+    .subtitulo {
+        width: 200px;
+        margin-left: 30%;
+        margin-top: 50%;
+    }
+    
+    .subtitulo h3 {
+        color: #94e0f7;
+        font-size: 1.5em;
+
+    }
+    .btn-flotante {
+        font-size: 14px;
+        padding: 12px 20px;
+        bottom: 40px;
+        right: 1000px;
+    }
+    .btn-flotante {
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #ffffff;
+        border-radius: 5px;
+        letter-spacing: 2px;
+        background-color: #1e87e9;
+        padding: 18px 30px;
+        position: fixed;
+        bottom: 60px;
+        right: 40px;
+        transition: background-color 300ms ease, transform 300ms ease, box-shadow 300ms ease;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        z-index: 99;
+    }
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: #ffffff 5px solid;
+    margin-bottom: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
